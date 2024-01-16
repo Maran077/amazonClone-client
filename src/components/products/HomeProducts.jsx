@@ -25,17 +25,13 @@ function HomeProducts({ setTotalPages }) {
 
   if (isLoading) return <LoadingSpinner extraStyle={"size-20"} />;
   if (isError || !data?.success)
-    return (
-      <h1 className="text-2xl text-red-700">
-        {error?.message || data?.message}
-      </h1>
-    );
+    return <h1 className="text-red-700">{error?.message || data?.message}</h1>;
 
   const { products } = data;
   return (
     <>
       <div className="flex flex-wrap gap-5 justify-center">
-        {products.map((product) => (
+        {products?.map((product) => (
           <ProductCard product={product} key={product._id} />
         ))}
       </div>

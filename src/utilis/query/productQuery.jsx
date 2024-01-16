@@ -36,6 +36,7 @@ export const getHomeProducts = async (filters) => {
     .join("&");
 
   const res = await fetch(`${server}/products/product?${queryString}`);
+  console.log(`${server}/products/product?${queryString}`);
   const data = await res.json();
   return data;
 };
