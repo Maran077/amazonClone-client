@@ -1,7 +1,7 @@
 import Cookies from "js-cookie";
+import { server } from "../Server";
 
 export const addReview = async ({ review }) => {
-  const server = import.meta.env.VITE_SERVER;
   const res = await fetch(`${server}/reviews/review`, {
     method: "POST",
     credentials: "include",

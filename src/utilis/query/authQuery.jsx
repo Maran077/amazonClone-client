@@ -1,4 +1,4 @@
-const server = import.meta.env.VITE_SERVER;
+import { server } from "../Server";
 export const signin = async ({ user }) => {
   const res = await fetch(`${server}/auth/signin`, {
     method: "POST",

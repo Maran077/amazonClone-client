@@ -1,6 +1,5 @@
 import Cookies from "js-cookie";
-
-const server = import.meta.env.VITE_SERVER;
+import { server } from "../Server";
 
 export const userProfile = async () => {
   const res = await fetch(`${server}/profile/user`, {

@@ -1,5 +1,6 @@
 import Cookies from "js-cookie";
-const server = import.meta.env.VITE_SERVER;
+import { server } from "../Server";
+
 export const createProduct = async ({ product }) => {
   const form = new FormData();
   const { productName, productImages, category, description, price, stocks } =
