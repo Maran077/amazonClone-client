@@ -3,7 +3,7 @@ import Pagination from "../components/Pagination";
 import FilterSelector from "../components/FilterSelector";
 import { useDispatch } from "react-redux";
 import { changeMenu } from "../utilis/redux/menuSlice";
-import HomeProducts from "../components/products/homeProducts";
+import HomeProducts from "../components/products/HomeProducts";
 
 function Home() {
   const dispatch = useDispatch();
