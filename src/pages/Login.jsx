@@ -32,6 +32,14 @@ function Login() {
         setErrorMsg={setErrorMsg}
         userMutationForLogin={userMutationForLogin}
       />
+      <p>
+        <span className="text-orange-600 font-[600] text-xl">UserName:</span>{" "}
+        TechHaven Emporium or ElegantLiving Furnishings
+      </p>
+      <p>
+        <span className="text-orange-600 font-[600] text-xl">Password:</span>{" "}
+        pa$$w01d
+      </p>
     </>
   );
 }
