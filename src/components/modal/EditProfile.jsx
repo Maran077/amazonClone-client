@@ -33,7 +33,6 @@ function EditProfile() {
   const { mutate, isPending } = useMutation({
     mutationFn: editUser,
     onSuccess: (res) => {
-      console.log(res);
       if (!res?.success) return toast.error(res.message);
       const { user, msg, cartProducts, sellingProucts } = res;
       dispatch(setUserProfile({ ...user, cartProducts, sellingProucts }));
@@ -78,7 +77,7 @@ function EditProfile() {
         id="description"
         placeholder="description"
         minLength={20}
-        maxLength={200}
+        maxLength={1000}
         extraStyle={userNewValue.role !== "seller" && "cursor-not-allowed"}
         disabled={userNewValue.role !== "seller"}
         value={userNewValue.description}

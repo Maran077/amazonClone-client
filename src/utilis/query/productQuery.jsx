@@ -16,14 +16,17 @@ export const createProduct = async ({ product }) => {
     form.append("productImages", file);
   }
 
-  const res = await fetch(`${server}/products/product`, {
-    method: "POST",
-    credentials: "include",
-    headers: {
-      Cookie: `token=${Cookies.get("token")}`,
-    },
-    body: form,
-  });
+  const res = await fetch(
+    `${server}/products/product?token=${Cookies.get("token")}`,
+    {
+      method: "POST",
+      credentials: "include",
+      headers: {
+        Cookie: `token=${Cookies.get("token")}`,
+      },
+      body: form,
+    }
+  );
 
   const data = await res.json();
   return data;
@@ -37,7 +40,7 @@ export const getHomeProducts = async (filters) => {
     .join("&");
 
   const res = await fetch(`${server}/products/product?${queryString}`);
-  console.log(`${server}/products/product?${queryString}`);
+
   const data = await res.json();
   return data;
 };

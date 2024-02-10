@@ -61,7 +61,7 @@ function CreateProduct() {
           id="productName"
           placeholder="product name"
           minLength={10}
-          maxLength={25}
+          maxLength={100}
           onChange={(e) =>
             setProductValue({ ...productValue, productName: e.target.value })
           }
@@ -106,7 +106,7 @@ function CreateProduct() {
           placeholder="product description"
           extraStyle={"h-40"}
           minLength={50}
-          maxLength={500}
+          maxLength={5000}
           onChange={(e) =>
             setProductValue({ ...productValue, description: e.target.value })
           }

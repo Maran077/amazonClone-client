@@ -36,7 +36,6 @@ function Auth({
 
     if (isLoginPage) return userMutationForLogin.mutate({ user });
     userMutationForSignin.mutate({ user: user });
-    console.log(user);
   };
 
   return (

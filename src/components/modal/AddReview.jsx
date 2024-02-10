@@ -50,7 +50,7 @@ function AddReview() {
         id="reviewTitle"
         placeholder="review title"
         minLength={5}
-        maxLength={50}
+        maxLength={100}
         onChange={(e) =>
           setReviewDetail({ ...reviewDetail, reviewTitle: e.target.value })
         }
@@ -70,7 +70,7 @@ function AddReview() {
         id="reviewText"
         placeholder="review"
         minLength={10}
-        maxLength={1000}
+        maxLength={5000}
         onChange={(e) =>
           setReviewDetail({ ...reviewDetail, reviewText: e.target.value })
         }

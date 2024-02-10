@@ -12,6 +12,7 @@ function Login() {
 
   const success = async (d) => {
     if (!d.success) return setErrorMsg(d.message);
+    console.log(d, "login");
     navigate("/");
   };
 

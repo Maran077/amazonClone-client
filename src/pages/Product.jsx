@@ -53,10 +53,11 @@ function Product() {
 
   if (isLoading)
     return <LoadingSpinner extraStyle={"w-[50px] h-[50px] mt-4"} />;
-  if (isError || !data?.success)
+  if (isError || !data?.success) {
     if (error?.name == "SyntaxError")
       return <h1 className="text-red-700">Error try again</h1>;
-  return <h1 className="text-red-700">{error?.message || data?.message}</h1>;
+    return <h1 className="text-red-700">{error?.message || data?.message}</h1>;
+  }
 
   const { productData, reviewAndReviewerData } = data.productAndReviewData;
   const {
